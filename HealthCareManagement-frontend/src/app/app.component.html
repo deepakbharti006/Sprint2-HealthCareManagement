@@ -1,0 +1,22 @@
+
+<nav class="navbar navbar-expand-sm bg-info navbar-dark sticky-top nav-item active">
+  <a class="navbar-brand">Health Care Management</a>
+  <a routerLink="view" class="nav-item nav-link text-white">View Center</a> 
+</nav>
+<div class="container">
+  <div class="jumbotron">
+    <div class="page-header">  
+    <h2 class="text-center">{{title}}</h2>
+    <hr/>
+  </div>
+  </div>
+</div>
+<div class="container">
+  <ul class="text-center list-inline py-3">
+    <li class="list-inline-item">
+      <a routerLink="/view" class="btn btn-danger">Show All Center</a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
+<router-outlet></router-outlet>

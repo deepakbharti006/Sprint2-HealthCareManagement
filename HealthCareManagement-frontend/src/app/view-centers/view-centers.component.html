@@ -1,0 +1,25 @@
+<div class="container">
+<h3 class="text-center">Diagnostic Center List</h3>
+<table class="col-md-10 mx-auto table table-striped table-hover table-bordered mt-4">
+
+    <tr>
+      <th>CENTER ID</th>
+      <th>CENTER NAME</th>
+      <!-- <th>CITY</th> -->
+      <th>Test ACTION</th>
+      <th>appointment ACTION</th>
+      
+    </tr>
+    <tr *ngFor="let center of centers ">
+      <td>{{center.centerId}}</td>
+      <td>{{center.centerName}}</td>  
+      <!-- <td>{{center.address}}</td>  -->
+      <td>
+         <button class="btn btn-primary" (click)="centerDetails(center.centerId)">Test Detail</button>
+      </td> 
+      <td>
+        <button class="btn btn-primary" (click)="appointmentdetails(center.centerId)">appointment Detail</button>
+     </td> 
+    </tr>
+  </table>
+</div>

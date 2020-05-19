@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="jumbotron">
+  <h2 class="text-center" style="margin: 10px;"><b>{{center.centerName}} Appointment Details</b></h2> 
+  <hr/>
+  <div *ngIf="center" class="card">
+  <div style="float: left;">
+    <div>
+      <label><b>Center Name: </b></label> {{center.centerName}}
+    </div>
+    </div>
+    <!-- <div style="float: right;">
+      <button class="btn btn-primary" (click)="addTest(center.centerId)">Add Tests</button>
+      </div> -->
+      </div>
+    </div>
+    <div class="container">
+    <hr>
+    <table class="col-md-10 mx-auto table table-striped table-hover table-bordered mt-4">
+      <tr>
+        <th>Appointment Id</th>
+        <th>Appointment Date</th>
+        <th>Appointment Status</th>
+        <th style="width: 50px;">Action</th>
+      </tr>
+    <tr *ngFor="let appobj of center.appointment">
+      <td>{{appobj.testAppointmentId}}</td> 
+     <td>{{appobj.testAppointmentDate}}</td>
+     <td>{{appobj.approved}}</td>
+    <td><button class="btn btn-danger" (click)="approveAppointment(appobj.testAppointmentId)" title="Clicking this button will change the appointment Status.">Approve</button>   </td>
+    </tr> 
+    </table> 
+  </div>
+  
+  
+  <br>
+  <br>
