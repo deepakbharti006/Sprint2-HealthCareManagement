@@ -1,5 +1,6 @@
 package com.capgemini.hcm.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +15,7 @@ public class Test {
 	@SequenceGenerator(name = "testId_generator", initialValue = 101, allocationSize = 1)
 	private Integer testId;
 
+	@Column(length = 25)
 	private String testName;
 
 	public Integer getTestId() {
@@ -54,4 +56,5 @@ public class Test {
 	}
 
 }
+
 

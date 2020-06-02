@@ -29,6 +29,6 @@ export class TestService {
   }
   public approveappointment(testAppointmentId: number): Observable<any>{
 
-    return this.http.put("http://localhost:8082/approveAppointment/"+testAppointmentId,{responseType: 'text'});
+    return this.http.put("http://localhost:8083/approveAppointment/"+testAppointmentId,{responseType: 'text'});
   }
 }
